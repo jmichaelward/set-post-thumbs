@@ -1,0 +1,13 @@
+{
+    "name": "jmichaelward/set-post-thumbs",
+    "description": "A simple WP-CLI command to query posts for their content and set the first found image as the post thumbnail.",
+    "type": "wp-cli-package",
+    "license": "GPL-3.0-or-later",
+    "authors": [
+        {
+            "name": "Jeremy Ward",
+            "email": "jeremy@jmichaelward.com"
+        }
+    ],
+    "require": {}
+}
