@@ -9,7 +9,9 @@
             "email": "jeremy@jmichaelward.com"
         }
     ],
-    "require": {},
+    "require": {
+        "wp-cli/wp-cli": "^2.4"
+    },
     "autoload": {
         "psr-4": {
             "JMichaelWard\\SetPostThumbs\\": "src/"
