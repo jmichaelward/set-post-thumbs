@@ -5,16 +5,18 @@ A simple WP-CLI command to query posts for their content and set the first found
 ## Installation
 
 ### Preferred
+There are two preferred ways to install this package:
 
-The preferred way to install this command is via [Composer](https://getcomposer.org).
+First, using WP-CLI's package installer command. Simply run `wp package install jmichaelward/set-post-thumbs`
+in the command line, then you're good to go.
 
-In the terminal, simply enter:
+Second, you can similarly install it using [Composer](https://getcomposer.org). In the terminal, enter:
 
 ```
 composer require jmichaelward/set-post-thumbs
 ```
 
-Assuming you're already using Composer's class autoloader in your WordPress project, then you can simply call the
+Assuming you're already using Composer's class autoloader in your WordPress project, then you can then call the
 function `JMichaelWard\SetPostThumbs\init_thumbnail_command()` inside an
 `mu-plugins` PHP file, an active plugin, or your theme's `functions.php` file.
 
