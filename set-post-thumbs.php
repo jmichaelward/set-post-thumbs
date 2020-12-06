@@ -1,20 +1,24 @@
 <?php
 /**
- *
+ * File for bootstrapping the thumbnail command.
  */
 
-use JMichaelWard\SetPostThumbs\ThumbnailCommand;
+namespace JMichaelWard\SetPostThumbs;
 
-if ( ! defined( 'WP_CLI' ) || ! function_exists( 'add_action' ) ) {
-	return;
-}
+use WP_CLI;
+use Throwable;
 
-add_action( 'cli_init', function() {
+/**
+ * Initializes the thumbnail command.
+ */
+function init_thumbnail_command() {
 	require_once __DIR__ . '/src/ThumbnailCommand.php';
 
-	try {
-		WP_CLI::add_command( 'thumbnail', ThumbnailCommand::class );
-	} catch ( Throwable $e ) {
-		//
-	}
-} );
+	add_action( 'cli_init', function() {
+		try {
+			WP_CLI::add_command( 'thumbnail', ThumbnailCommand::class );
+		} catch ( Throwable $e ) {
+			//
+		}
+	} );
+}
